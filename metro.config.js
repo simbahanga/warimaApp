@@ -8,6 +8,11 @@ const config = getDefaultConfig(projectRoot);
 // Important to allow importing package exports
 config.resolver.unstable_enablePackageExports = true;
 
+config.resolver.extraNodeModules = {
+  ...config.resolver.extraModules,
+  ox: path.resolve(__dirname, "node_modules/ox"),
+};
+
 config.resolver.unstable_conditionNames = [
 	"browser",
 	"require",

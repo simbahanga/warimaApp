@@ -1,5 +1,6 @@
+import "node-libs-react-native/globals.js";
 import "react-native-get-random-values";
-// Add global shims
+ 
 import "@account-kit/react-native";
 import "react-native-reanimated";
 
@@ -14,10 +15,6 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Platform } from "react-native";
 
 export { ErrorBoundary } from "expo-router";
-
-export const unstable_settings = {
-	initialRouteName: "(main)",
-};
 
 SplashScreen.preventAutoHideAsync();
 
@@ -49,25 +46,7 @@ function RootLayoutNav() {
 	return (
 		<AlchemyAuthSessionProvider>
 			<SafeAreaProvider>
-				<Stack
-					screenOptions={{
-						headerShown: false,
-					}}
-				>
-					<Stack.Screen
-						name="otp-modal"
-						options={{
-							presentation:
-								Platform.OS === "ios"
-									? "formSheet"
-									: "containedTransparentModal",
-							animation:
-								Platform.OS === "android"
-									? "slide_from_bottom"
-									: "default",
-						}}
-					/>
-				</Stack>
+				<Stack screenOptions={{ headerShown: false }} />
 			</SafeAreaProvider>
 		</AlchemyAuthSessionProvider>
 	);

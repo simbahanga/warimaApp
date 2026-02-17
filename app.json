@@ -5,16 +5,23 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "account-kit-expo-quickstart",
+    "scheme": "warimaApp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/splash-icon.png",
+      "image": "./assets/images/warima_wordmark_tight.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "extra": {
-      "EXPO_PUBLIC_ALCHEMY_API_KEY": "anykeyhere"
+      "EXPO_PUBLIC_ALCHEMY_API_KEY": "rhD0cq1k-4QeiVtTRKXKi",
+      "EXPO_PUBLIC_ALCHEMY_POLICY_ID": "f7a782c2-e11f-4c3b-b6a6-d86cbc338bca",
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b1adab51-82b2-48ff-adaf-319d1f958072"
+      }
     },
     "ios": {
       "supportsTablet": true,
@@ -45,6 +52,7 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "owner": "simba_hanga"
   }
 }
